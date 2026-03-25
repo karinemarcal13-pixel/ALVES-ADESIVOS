@@ -1,91 +1,193 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f8f8f8;
+  background: #0f0f0f;
+  color: white;
 }
 
+/* MENU */
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  z-index: 1000;
+}
+
+.menu a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: gold;
+}
+
+/* HEADER */
 header {
   text-align: center;
-  padding: 50px;
-  background: #111;
-  color: white;
+  padding: 120px 20px 80px;
+  background: linear-gradient(45deg, #000, #222);
 }
 
-header h1 {
-  font-size: 28px;
+h1 {
+  font-size: 40px;
 }
 
-.botoes a {
-  display: inline-block;
-  margin: 10px;
-  padding: 12px 20px;
-  background: #25d366;
-  color: white;
+/* Ícones */
+i {
+  margin-right: 8px;
+}
+
+/* BOTÕES */
+.btn {
+  background: gold;
+  color: black;
+  padding: 12px 25px;
   text-decoration: none;
-  border-radius: 8px;
+  display: inline-block;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
+.btn:hover {
+  background: #ffd700;
+  transform: scale(1.05);
+}
+
+/* SEÇÕES */
 section {
-  padding: 30px;
+  padding: 60px 20px;
   text-align: center;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 0.6s;
 }
 
-section.mostrar {
-  opacity: 1;
-  transform: translateY(0);
+/* DESTAQUES */
+.destaque {
+  margin-top: 20px;
 }
 
-.diferenciais ul {
-  list-style: none;
-  padding: 0;
+.destaque p {
+  margin: 5px 0;
+  color: #ccc;
 }
 
-.diferenciais li {
-  margin: 10px 0;
-  font-size: 18px;
+/* CARDS */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-form {
+.card {
+  background: #1a1a1a;
+  padding: 20px;
+  width: 220px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: #222;
+}
+
+/* DEPOIMENTOS */
+.depoimentos .card {
+  font-style: italic;
+}
+
+.depoimentos span {
+  display: block;
+  margin-top: 10px;
+  color: gold;
+}
+
+/* CONTATO */
+.contato form {
   display: flex;
   flex-direction: column;
-  max-width: 400px;
+  max-width: 300px;
   margin: auto;
+  gap: 10px;
 }
 
-form input, form textarea, form select {
-  margin: 10px 0;
+input, button {
   padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-button {
-  background: black;
-  color: white;
-  padding: 12px;
   border: none;
-  border-radius: 6px;
-  cursor: pointer;
+  border-radius: 5px;
 }
 
+/* BOTÃO */
+button {
+  background: gold;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ffd700;
+}
+
+/* LINKS */
+.whatsapp {
+  display: block;
+  margin-top: 20px;
+  color: #25D366;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.whatsapp:hover {
+  transform: scale(1.05);
+}
+
+.instagram {
+  display: block;
+  margin-top: 10px;
+  color: #E1306C;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.instagram:hover {
+  transform: scale(1.05);
+}
+
+/* FOOTER */
 footer {
-  background: #111;
-  color: white;
   text-align: center;
   padding: 20px;
+  background: #000;
+  font-size: 14px;
+  color: #aaa;
 }
 
-.whatsapp-fixo {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25d366;
-  color: white;
-  padding: 15px;
-  border-radius: 50%;
-  font-size: 20px;
-  text-decoration: none;
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    padding-top: 140px;
+  }
 }
