@@ -2,126 +2,70 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Alves Adesivos</title>
-
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juliano Adesivos</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-<!-- MENU -->
-<nav class="menu">
-  <h2>Alves Adesivos</h2>
-  <div>
-    <a href="#beneficios">Benefícios</a>
-    <a href="#processo">Como funciona</a>
-    <a href="#faq">Dúvidas</a>
-    <a href="#contato">Contato</a>
-  </div>
+<nav>
+  <h2>Juliano Adesivos</h2>
+  <button onclick="chamarWhats()">Orçamento</button>
 </nav>
 
-<!-- HERO -->
-<header>
-  <div class="hero-text">
-    <h1>Transforme sua casa sem reforma</h1>
-    <p>Resultado profissional em poucas horas</p>
+<section class="hero fade">
+  <h1>Transforme seu ambiente sem reforma</h1>
+  <p>Rápido • Limpo • Profissional</p>
+  <button onclick="chamarWhats()">Falar no WhatsApp</button>
+</section>
 
-    <div class="hero-badges">
-      <span>✔ Sem sujeira</span>
-      <span>✔ Rápido</span>
-      <span>✔ Econômico</span>
-    </div>
+<section class="sobre fade">
+  <h2>Sobre</h2>
+  <p>
+    Aplicação profissional de adesivos em paredes, móveis e eletrodomésticos,
+    com acabamento de alto padrão e sem sujeira.
+  </p>
+</section>
 
-    <p class="local">📍 Londrina e região</p>
-
-    <a href="#contato" class="btn">Solicitar orçamento</a>
-  </div>
-</header>
-
-<!-- BENEFÍCIOS -->
-<section id="beneficios">
-  <h2>Por que escolher adesivos?</h2>
-
+<section class="servicos fade">
+  <h2>Serviços</h2>
   <div class="grid">
-    <div class="box"><i class="fa-solid fa-money-bill"></i><h3>Economia</h3><p>Até 70% mais barato</p></div>
-    <div class="box"><i class="fa-solid fa-bolt"></i><h3>Rapidez</h3><p>Pronto no mesmo dia</p></div>
-    <div class="box"><i class="fa-solid fa-droplet"></i><h3>Resistente</h3><p>Água e calor</p></div>
-    <div class="box"><i class="fa-solid fa-palette"></i><h3>Personalizado</h3><p>Seu estilo</p></div>
+    <div><i class="fas fa-home"></i><p>Paredes</p></div>
+    <div><i class="fas fa-couch"></i><p>Móveis</p></div>
+    <div><i class="fas fa-tv"></i><p>Eletros</p></div>
+    <div><i class="fas fa-tint"></i><p>Áreas úmidas</p></div>
   </div>
 </section>
 
-<!-- PROCESSO -->
-<section id="processo">
-  <h2>Como funciona</h2>
-
-  <div class="passos">
-    <div>1️⃣ Você chama no WhatsApp</div>
-    <div>2️⃣ Avaliamos seu ambiente</div>
-    <div>3️⃣ Aplicação rápida</div>
-    <div>4️⃣ Resultado pronto</div>
+<section class="galeria fade">
+  <h2>Projetos</h2>
+  <div class="imgs">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
+    <img src="https://images.unsplash.com/photo-1582582429416-4e7c6c9b4b8c">
   </div>
 </section>
 
-<!-- PROVA SOCIAL -->
-<section class="prova">
-  <h2>Clientes satisfeitos</h2>
-
-  <div class="grid">
-    <div class="box">⭐⭐⭐⭐⭐<p>"Ficou incrível"</p></div>
-    <div class="box">⭐⭐⭐⭐⭐<p>"Muito rápido"</p></div>
-    <div class="box">⭐⭐⭐⭐⭐<p>"Valeu muito"</p></div>
-  </div>
+<section class="instagram fade">
+  <h2>Instagram</h2>
+  <a href="https://www.instagram.com/" target="_blank">Ver mais projetos</a>
 </section>
 
-<!-- FAQ -->
-<section id="faq">
-  <h2>Dúvidas frequentes</h2>
-
-  <div class="faq">
-    <div>
-      <h4>Estraga o móvel?</h4>
-      <p>Não, o adesivo protege ainda mais.</p>
-    </div>
-
-    <div>
-      <h4>Dura quanto tempo?</h4>
-      <p>Anos, com manutenção simples.</p>
-    </div>
-
-    <div>
-      <h4>Pode molhar?</h4>
-      <p>Sim, é resistente à água.</p>
-    </div>
-  </div>
+<section class="mapa fade">
+  <h2>Atendemos Londrina e região</h2>
+  <iframe src="https://www.google.com/maps?q=Londrina&output=embed"></iframe>
 </section>
-
-<!-- CTA FINAL -->
-<section class="cta">
-  <h2>Transforme seu ambiente hoje</h2>
-  <a href="#contato" class="btn">Chamar agora</a>
-</section>
-
-<!-- CONTATO -->
-<section id="contato">
-  <h2>Peça seu orçamento</h2>
-
-  <form onsubmit="enviarWhats(event)">
-    <input type="text" id="nome" placeholder="Seu nome" required>
-    <input type="text" id="servico" placeholder="O que deseja transformar?" required>
-    <button type="submit">Enviar</button>
-  </form>
-</section>
-
-<!-- BOTÃO FIXO -->
-<a href="https://wa.me/5543984046323" class="zap">
-  <i class="fa-brands fa-whatsapp"></i>
-</a>
 
 <footer>
-  © 2026 Alves Adesivos
+  <p>© 2026 Juliano Adesivos</p>
 </footer>
+
+<button class="whatsapp-float" onclick="chamarWhats()">
+  <i class="fab fa-whatsapp"></i>
+</button>
 
 <script src="script.js"></script>
 
