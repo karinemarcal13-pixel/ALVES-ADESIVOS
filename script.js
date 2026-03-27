@@ -1,6 +1,6 @@
 // WhatsApp
 function chamarWhats() {
-  let numero = "5599999999999"; // seu número
+  let numero = "5543984046323"; // seu número
   let msg = "Olá! Gostaria de um orçamento.";
 
   window.open(`https://wa.me/${numero}?text=${encodeURIComponent(msg)}`);
